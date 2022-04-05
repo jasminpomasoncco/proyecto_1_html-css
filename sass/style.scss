@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap'); 
+
+
+
+
+.red{
+    color: #292726 ;
+}
+.white{
+    color: #ffffff;
+}
+.yellow{
+    color: #f58325;
+}
+.green{
+    color:#249637 ;
+}
+
+.logo{
+    font-size: 65px;
+    color:#222222 ;
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+    display: flex;
+}
+
+.contacto{
+    width: 400px;
+    background: #f58325;
+    padding: 10px;
+    margin-top:30px;
+    
+    margin: 20px;
+    margin-left:30%;
+    color: white;
+    box-shadow: 7px 15px 37px rgb(0, 0, 0);
+    .botons{
+        width: 100%;
+        background-color: #292726;
+        color: rgb(255, 255, 255);
+        border: none;
+        padding: 10px;
+        
+    
+    }
+    
+}
+.controles{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    font-size: 18px;
+    background: #f3e7dd;
+    color: white;
+    border: 1px solid #ffffff;
+    
+}
+
+.ubicacion{
+    padding: 10px;
+    margin-top:40px;
+    margin: auto;
+  margin-left: 30%;
+  margin-bottom: 20px;
+}
+
+
+.galeria1{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-auto-rows: 150px;
+padding: 20px;
+grid-gap: 10px;
+
+}
+
+.img2{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.tituloservicio{
+position: absolute;
+bottom: 0;
+color: rgb(255, 255, 255) ;
+background: linear-gradient(rgba(255,255,255,0.1),rgba(0,0,0,1));
+width: 100%;
+padding: 10px;
+}
+
+
+
+
+
+header{
+    background-color: #fff6ef;
+    display: flex;
+    justify-content:space-evenly;
+    width: 100%;
+ align-items:flex-start;
+   
+}
+
+label:hover{
+    cursor: pointer;
+
+}
+
+label{
+font-size: 20px;
+padding: 15px;
+border-right: 1px #ffffff;
+}
+
+#btn-menu{
+    display: none;
+}
+.menu{
+    
+    li{
+        border-right: 1px solid #ffffff;
+        background: #f58325;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    
+    }
+    li:hover{
+        background: #ffdccb;
+       }
+
+       ul{
+        margin: 0;
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none; 
+        font-family: 'Arima Madurai', cursive;
+        font-size: 20px;
+        a{
+            padding: 10px;
+        
+        }
+        
+    }
+}
+
+
+.navegacion{
+    background: #ffeb92;
+    display: block;
+
+    left: 0;
+    right: 0;
+}
+
+
+.item__servicio{
+    position: relative;
+ }
+
+h1{
+    font-size: 35px;
+   color: #292726 ;
+   font-family: 'Arima Madurai', cursive;
+}
+h2{
+    font-family: 'Quattrocento', serif;
+    color: #292726 ;
+}
+
+
+li {
+  
+    list-style: none;
+   
+ 
+}
+
+a{
+     
+    color: #0c0c0c;
+    
+}
+p{
+    font-family: 'Quattrocento', serif;
+    font-size: 23px;
+    display: flex;
+    
+}
+
+body{
+    font-size: 15px;
+color: #017814;
+background-color: #fff6ef;
+}
+
+footer{
+    color:#ffffff;
+    width: 120%;
+    background: #272727;
+    position: absolute;
+
+}
+
+.contenedor-footer{
+width: 100%;
+max-width: 1200px;
+height: 310px;
+
+margin: auto;
+display: grid;
+grid-template-columns: repeat(2,1fr);
+.colum1{
+    max-width: 1000px;
+     padding: 40px 0px;
+     margin-top: 10px;
+
+}
+.colum2{
+    max-width: 1000px;
+     padding: 40px 0px;
+     margin-top: 10px;
+
+}
+
+h1{
+    color: #ffffff;
+}
+
+
+}
+
+
+
+.row{
+    display: flex;
+    img{
+        width: 36px;
+        height: 36px;
+        }
+}
+
+
+
+.cajiatmenu{
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+    
+  
+}
+
+.cajita{
+   width: 100%;
+    height: 400px;
+
+background-image: url(../img/index/INDEX11.png);
+background-size: cover;
+background-repeat: none;
+
+}
+
+
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 2fr  1fr ;
+    height: 100vh;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+
+}
+
+.box1{
+
+grid-area: header;
+
+
+}
+
+.box2{
+
+
+grid-area: main;
+
+
+}
+
+
+.box5{
+
+grid-area: footer;
+
+}
