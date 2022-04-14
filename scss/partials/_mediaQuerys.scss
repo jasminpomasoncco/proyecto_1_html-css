@@ -1,3 +1,4 @@
+
 @media (max-width:768px){
     label{
         display: block;
@@ -9,14 +10,16 @@
         margin-left: -70%;
         transition: all 0.5s;
         z-index: 1000;
+
         ul{
             flex-direction: column;
         }
+
         li{
-            border-top: 1px solid #fcfcfc ;
+            border-top: 1px solid $blanco ;
         }
     }
-    
+
     #btn-menu:checked ~ .menu{
         margin: 0;
     }
@@ -72,4 +75,3 @@
     
     
 }
-

@@ -1,50 +1,55 @@
+
+@import "./partials/mediaQuerys";
+@import "./partials/header";
+@import "./partials/variables";
+@import "./partials/mapas";
+@import "./partials/extend";
+
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap'); 
 
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
 
 
-.red{
-    color: #292726 ;
-}
-.white{
-    color: #ffffff;
-}
-.yellow{
-    color: #f58325;
-}
-.green{
-    color:#249637 ;
-}
+
 
 .logo{
+     @extend %flex;
+     justify-content: center;
     font-size: 65px;
-    color:#222222 ;
+    color:$plomo ;
     font-family: 'Acme', sans-serif;
-    text-align: center;
-    display: flex;
+ 
 }
 
 .contacto{
     width: 400px;
-    background: #f58325;
+    background: $naranja;
     padding: 10px;
     margin-top:30px;
     
     margin: 20px;
     margin-left:30%;
-    color: white;
+    color: $blanco;
     box-shadow: 7px 15px 37px rgb(0, 0, 0);
     .botons{
         width: 100%;
-        background-color: #292726;
-        color: rgb(255, 255, 255);
+        background-color: $plomo;
+        color: $blanco;
         border: none;
         padding: 10px;
         
     
     }
+
     
 }
 .controles{
@@ -52,10 +57,10 @@
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 16px;
-    font-size: 18px;
-    background: #f3e7dd;
-    color: white;
-    border: 1px solid #ffffff;
+    font-size: map-get($display, tamaño-fuente2);
+    background: $blanco;
+    color: $blanco;
+    border: 1px solid $blanco;
     
 }
 
@@ -86,7 +91,7 @@ object-fit: cover;
 .tituloservicio{
 position: absolute;
 bottom: 0;
-color: rgb(255, 255, 255) ;
+color: $blanco ;
 background: linear-gradient(rgba(255,255,255,0.1),rgba(0,0,0,1));
 width: 100%;
 padding: 10px;
@@ -96,15 +101,6 @@ padding: 10px;
 
 
 
-header{
-    background-color: #fff6ef;
-    display: flex;
-    justify-content:space-evenly;
-    width: 100%;
- align-items:flex-start;
-   
-}
-
 label:hover{
     cursor: pointer;
 
@@ -113,30 +109,16 @@ label:hover{
 label{
 font-size: 20px;
 padding: 15px;
-border-right: 1px #ffffff;
+border-right: 1px $blanco;
 }
 
 #btn-menu{
     display: none;
 }
-.menu{
-    
-    li{
-        border-right: 1px solid #ffffff;
-        background: #f58325;
-        padding: 10px;
-        width: 100%;
-        text-align: center;
-    
-    }
-    li:hover{
-        background: #ffdccb;
-       }
 
-       ul{
-        margin: 0;
-        display: flex;
-        justify-content: space-evenly;
+.menu{
+    ul{
+       @include flexx(flex, space-evenly, center,0px);
         list-style: none; 
         font-family: 'Arima Madurai', cursive;
         font-size: 20px;
@@ -144,10 +126,24 @@ border-right: 1px #ffffff;
             padding: 10px;
         
         }
-        
     }
+
+    li{
+        border-right: 1px solid $blanco;
+        background: $naranja;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        :hover{
+            background: #ffdccb;
+           }
+    }
+    
 }
 
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
 
 .navegacion{
     background: #ffeb92;
@@ -157,19 +153,17 @@ border-right: 1px #ffffff;
     right: 0;
 }
 
-
 .item__servicio{
     position: relative;
  }
-
 h1{
-    font-size: 35px;
-   color: #292726 ;
+    font-size: map-get($display, tamaño-fuente1);
+   color: $plomo ;
    font-family: 'Arima Madurai', cursive;
 }
 h2{
     font-family: 'Quattrocento', serif;
-    color: #292726 ;
+    color: $plomo ;
 }
 
 
@@ -188,25 +182,26 @@ a{
 p{
     font-family: 'Quattrocento', serif;
     font-size: 23px;
-    display: flex;
+    @extend %flex;
     
 }
 
 body{
-    font-size: 15px;
+    font-size: map-get($display, tamaño-fuente2);
 color: #017814;
-background-color: #fff6ef;
+background-color: $blanco;
 }
 
 footer{
-    color:#ffffff;
-    width: 120%;
-    background: #272727;
+    color:$blanco;
+    width: 100%;
+    background: $plomo;
     position: absolute;
 
 }
 
 .contenedor-footer{
+    
 width: 100%;
 max-width: 1200px;
 height: 310px;
@@ -214,6 +209,9 @@ height: 310px;
 margin: auto;
 display: grid;
 grid-template-columns: repeat(2,1fr);
+h1{
+    color: $blanco;
+}
 .colum1{
     max-width: 1000px;
      padding: 40px 0px;
@@ -226,24 +224,16 @@ grid-template-columns: repeat(2,1fr);
      margin-top: 10px;
 
 }
-
-h1{
-    color: #ffffff;
 }
-
-
-}
-
 
 
 .row{
-    display: flex;
+    @extend %flex;
     img{
         width: 36px;
         height: 36px;
         }
 }
-
 
 
 .cajiatmenu{
@@ -299,3 +289,6 @@ grid-area: main;
 grid-area: footer;
 
 }
+
+
+

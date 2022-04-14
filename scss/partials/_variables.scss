@@ -1,0 +1,11 @@
+$plomo: #292726 ;
+$blanco: #ffffff;
+$naranja: #f58325;
+$verde:#249637 ;
+
+@mixin flexx($display, $horizontal, $vertical, $margen){
+display: $display;
+justify-content: $horizontal;
+align-items: $vertical;
+margin: $margen;
+}
