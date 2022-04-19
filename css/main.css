@@ -1,7 +1,81 @@
 @import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quattrocento&display=swap");
+header {
+  background-color: #f0dcdc65;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
 
+.logo, p, .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px;
+}
+
+.carrusel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.carrusel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 1270px;
+  /* max-width: 510px; */
+  scroll-behavior: smooth;
+}
+
+.carrusel-fotos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  overflow: auto;
+}
+
+.carrusel-fotos img {
+  background: black;
+  border: 4px solid black;
+  width: 300px;
+  height: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.carrusel-menu {
+  display: none;
+}
+
+.carrusel-menu {
+  display: block;
+}
+
+.carrusel-menu img {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50px;
+  height: 40px;
+  border: 10px solid #685858;
+}
 
 @media (max-width: 768px) {
   label {
@@ -21,9 +95,10 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .menu
-.menu
-#btn-menu:checked ~ .menu {
+  .menu li {
+    border-top: 1px solid #ffff;
+  }
+  #btn-menu:checked ~ .menu {
     margin: 0;
   }
   .cajita {
@@ -31,8 +106,28 @@
     height: 200px;
   }
   .galeria1 {
-    -ms-grid-columns: (1fr);
+    -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+  }
+  .carrusel-fotos {
+    overflow: hidden;
+  }
+  .carrusel-fotos img {
+    width: 500px;
+    height: 400px;
+  }
+  .carrusel-menu {
+    display: block;
+  }
+  .carrusel-menu img {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 50px;
+    height: 40px;
+    border: 10px solid #797979;
+  }
+  .carrusel-menu img:hover {
+    border: none;
   }
 }
 
@@ -42,9 +137,7 @@
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        grid-template-areas: "header"
- "main"
- "footer";
+        grid-template-areas: "header" "main" "footer";
     max-width: 458px;
   }
   header {
@@ -69,23 +162,9 @@
     font-size: 15px;
   }
   .galeria1 {
-    -ms-grid-columns: (1fr);
+    -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
   }
-}
-
-header {
-  background-color: #fff6ef;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  width: 100%;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 
 * {
@@ -98,18 +177,17 @@ header {
 }
 
 .logo {
-  font-size: 65px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 60px;
   color: #292726;
   font-family: 'Acme', sans-serif;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .contacto {
   width: 400px;
-  background: #f58325;
+  background: #c4712e8e;
   padding: 10px;
   margin-top: 30px;
   margin: 20px;
@@ -132,7 +210,7 @@ header {
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 16px;
-  font-size: 18px;
+  font-size: 15px;
   background: #ffffff;
   color: #ffffff;
   border: 1px solid #ffffff;
@@ -149,7 +227,7 @@ header {
 .galeria1 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr);
+  -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 150px;
   padding: 20px;
@@ -188,13 +266,16 @@ label {
 }
 
 .menu ul {
-  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px;
   list-style: none;
   font-family: 'Arima Madurai', cursive;
   font-size: 20px;
@@ -206,14 +287,19 @@ label {
 
 .menu li {
   border-right: 1px solid #ffffff;
-  background: #f58325;
-  padding: 10px;
+  background: #c4712e8e;
+  padding: 15px;
   width: 100%;
   text-align: center;
 }
 
-.menu li :hover {
-  background: #ffdccb;
+.menu li:hover {
+  background: #db906b;
+}
+
+.selector-for-some-widget {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 .navegacion {
@@ -249,15 +335,12 @@ a {
 p {
   font-family: 'Quattrocento', serif;
   font-size: 23px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 body {
   font-size: 15px;
   color: #017814;
-  background-color: #ffffff;
+  background-image: url(../img/index/bosque-poligonal_2880x1800_xtrafondos.com.jpg);
 }
 
 footer {
@@ -274,7 +357,7 @@ footer {
   margin: auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr);
+  -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
 }
 
@@ -292,12 +375,6 @@ footer {
   max-width: 1000px;
   padding: 40px 0px;
   margin-top: 10px;
-}
-
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .row img {
@@ -327,25 +404,26 @@ footer {
   -ms-grid-rows: 1fr 2fr  1fr;
       grid-template-rows: 1fr 2fr  1fr;
   height: 100vh;
-      grid-template-areas: "header header header"
- "main main main"
- "footer footer footer";
+      grid-template-areas: "header header header" "main main main" "footer footer footer";
 }
 
 .box1 {
- 
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: header;
 }
 
 .box2 {
-  
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: main;
 }
 
 .box5 {
- 
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: footer;
 }

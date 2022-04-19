@@ -1,0 +1,40 @@
+.carrusel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.carrusel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 1030px;
+  /* max-width: 510px; */
+  scroll-behavior: smooth;
+}
+
+.carrusel-fotos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  overflow: auto;
+}
+
+.carrusel-fotos img {
+  background: black;
+  border: 4px solid black;
+  width: 300px;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.carrusel-menu {
+  display: none;
+}
+/*# sourceMappingURL=carrousel.css.map */

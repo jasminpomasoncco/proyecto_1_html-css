@@ -1,9 +1,10 @@
-
-@import "./partials/mediaQuerys";
 @import "./partials/header";
 @import "./partials/variables";
 @import "./partials/mapas";
 @import "./partials/extend";
+@import "./partials/carrousel";
+@import "./partials/mediaQuerys";
+
 
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@500&display=swap');
@@ -24,7 +25,7 @@
 .logo{
      @extend %flex;
      justify-content: center;
-    font-size: 65px;
+    font-size: 60px;
     color:$plomo ;
     font-family: 'Acme', sans-serif;
  
@@ -131,13 +132,15 @@ border-right: 1px $blanco;
     li{
         border-right: 1px solid $blanco;
         background: $naranja;
-        padding: 10px;
+        padding: 15px;
         width: 100%;
-        text-align: center;
-        :hover{
-            background: #ffdccb;
-           }
+        text-align:center;
+       
     }
+ li:hover{
+            background: #db906b;
+          
+           }
     
 }
 
@@ -189,7 +192,8 @@ p{
 body{
     font-size: map-get($display, tamaño-fuente2);
 color: #017814;
-background-color: $blanco;
+
+background-image: url(../img/index/bosque-poligonal_2880x1800_xtrafondos.com.jpg);
 }
 
 footer{
