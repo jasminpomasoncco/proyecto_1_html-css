@@ -2,17 +2,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quattrocento&display=swap");
 header {
-  background-color: #f0dcdc65;
+  width: 100%;
+  background-color: #f7c17b;
+  position: fixed;
+  left: 0;
+}
+
+header label {
+  display: none;
+  font-size: 20px;
+  padding: 22px;
+  border-right: 1px solid #f7c17b;
+}
+
+header label:hover {
+  cursor: pointer;
+}
+
+header .logo_main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  width: 100%;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .logo, p, .row {
@@ -33,6 +49,10 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 70px;
+  top: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .carrusel ul {
@@ -53,10 +73,8 @@ header {
 }
 
 .carrusel-fotos img {
-  background: black;
-  border: 4px solid black;
-  width: 300px;
-  height: 300px;
+  width: 1200px;
+  height: 500px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -78,7 +96,10 @@ header {
 }
 
 @media (max-width: 768px) {
-  label {
+  header {
+    position: absolute;
+  }
+  header label {
     display: block;
   }
   .menu {
@@ -109,21 +130,18 @@ header {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
-  .carrusel-fotos {
-    overflow: hidden;
-  }
   .carrusel-fotos img {
     width: 500px;
     height: 400px;
   }
   .carrusel-menu {
-    display: block;
+    display: none;
   }
   .carrusel-menu img {
+    -o-object-fit: contain;
+       object-fit: contain;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    width: 50px;
-    height: 40px;
     border: 10px solid #797979;
   }
   .carrusel-menu img:hover {
@@ -176,6 +194,21 @@ header {
   list-style: none;
 }
 
+main {
+  padding-top: 5rem;
+}
+
+.section_index {
+  margin-left: 90px;
+  margin-right: 90px;
+  margin-top: 0px;
+  margin-bottom: 60px;
+}
+
+.catalogo_1 {
+  padding: 50px;
+}
+
 .logo {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -183,11 +216,13 @@ header {
   font-size: 60px;
   color: #292726;
   font-family: 'Acme', sans-serif;
+  padding: 10px;
+  text-align: center;
 }
 
 .contacto {
   width: 400px;
-  background: #c4712e8e;
+  background: #c4722edc;
   padding: 10px;
   margin-top: 30px;
   margin: 20px;
@@ -251,50 +286,51 @@ header {
   padding: 10px;
 }
 
-label:hover {
-  cursor: pointer;
-}
-
 label {
+  color: aliceblue;
   font-size: 20px;
   padding: 15px;
   border-right: 1px #ffffff;
-}
-
-#btn-menu {
-  display: none;
 }
 
 .menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
   margin: 0px;
   list-style: none;
   font-family: 'Arima Madurai', cursive;
   font-size: 20px;
 }
 
-.menu ul a {
-  padding: 10px;
-}
-
 .menu li {
   border-right: 1px solid #ffffff;
-  background: #c4712e8e;
-  padding: 15px;
-  width: 100%;
+  background: #c4722edc;
+  padding: 7px;
   text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.menu li a {
+  padding: 10px 10px;
+  display: block;
+  text-decoration: none;
 }
 
 .menu li:hover {
   background: #db906b;
+}
+
+#btn-menu {
+  display: none;
 }
 
 .selector-for-some-widget {
@@ -304,9 +340,14 @@ label {
 
 .navegacion {
   background: #ffeb92;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
   left: 0;
   right: 0;
+  position: fixed;
+  top: 66px;
 }
 
 .item__servicio {
@@ -329,7 +370,7 @@ li {
 }
 
 a {
-  color: #0c0c0c;
+  color: #222222;
 }
 
 p {
@@ -339,7 +380,7 @@ p {
 
 body {
   font-size: 15px;
-  color: #017814;
+  color: #361e08;
   background-image: url(../img/index/bosque-poligonal_2880x1800_xtrafondos.com.jpg);
 }
 
@@ -375,6 +416,10 @@ footer {
   max-width: 1000px;
   padding: 40px 0px;
   margin-top: 10px;
+}
+
+.row label {
+  color: #fff9f9;
 }
 
 .row img {

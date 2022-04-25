@@ -1,9 +1,27 @@
 
 header{
-    background-color: #f0dcdc65;
+     width: 100%;
+    background-color: rgb(247, 193, 123);
+   position: fixed;
+   left: 0;
+  
+       label{
+        display: none;
+        font-size: 20px;
+        padding: 22px;
+        border-right: 1px solid rgb(247, 193, 123);
+}
+
+
+label:hover{
+    cursor: pointer;
+    
+}
+
+.logo_main{
     display: flex;
-    justify-content:space-evenly;
-    width: 100%;
- align-items:flex-start;
+    justify-content: space-between;
+    align-items: center;
+   }
    
 }

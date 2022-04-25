@@ -1,10 +1,14 @@
 
 
 @media (max-width:768px){
-    label{
+
+    header{
+        position: absolute;
+       label{
         display: block;
     
-    }
+    } 
+    } 
     .menu{
         position: absolute;
         width: 70%;
@@ -38,19 +42,22 @@
         }
 
         .carrusel-fotos {
-            overflow: hidden;
+           
+            
             img {
             width: 500px;
             height: 400px;
           }
+
           }
         
           .carrusel-menu {
-            display: block; 
+             
+            display: none; 
             img {
+                object-fit: contain;
             box-sizing: border-box;
-            width: 50px;
-            height: 40px;
+            
             border: 10px solid rgb(121, 121, 121);
           }
 
@@ -58,7 +65,8 @@
           .carrusel-menu img:hover {
             border: none;
           }
-
+        
+       
     }
     
 
