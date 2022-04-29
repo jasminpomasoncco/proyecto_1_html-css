@@ -6,6 +6,7 @@
         position: absolute;
        label{
         display: block;
+        
     
     } 
     } 
@@ -27,6 +28,7 @@
 
     #btn-menu:checked ~ .menu{
         margin: 0;
+        
     }
     .cajita{
         width: 100%;
@@ -58,15 +60,25 @@
                 object-fit: contain;
             box-sizing: border-box;
             
-            border: 10px solid rgb(121, 121, 121);
+            border: 5px solid rgb(121, 121, 121);
           }
 
           }
           .carrusel-menu img:hover {
             border: none;
           }
+        footer{
+             .contenedor-footer{
+                height: 600px;
+          display:flex;
+          flex-direction: column;
+     text-align: center;
+            
+            }
+        }
+         
         
-       
+        
     }
     
 
@@ -103,6 +115,6 @@
            
             
             }
-    
+   
           
 }
