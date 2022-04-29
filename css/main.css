@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quattrocento&display=swap");
 header {
   width: 100%;
-  background-color: #f7c17b;
+  background-color: rgba(245, 238, 229, 0.568);
   position: fixed;
   left: 0;
 }
@@ -97,13 +97,13 @@ header .logo_main {
 
 @media (max-width: 768px) {
   header {
-    position: absolute;
+    position: fixed;
   }
   header label {
     display: block;
   }
   .menu {
-    position: absolute;
+    position: fixed;
     width: 70%;
     margin-left: -70%;
     -webkit-transition: all 0.5s;
@@ -233,7 +233,7 @@ main {
 
 .contacto {
   width: 400px;
-  background: #c4722edc;
+  background: #c4722ecb;
   padding: 10px;
   margin-top: 10px;
   margin: 20px;
@@ -321,7 +321,7 @@ label {
 
 .menu li {
   border-right: 1px solid #ffffff;
-  background: #c4722edc;
+  background: #c4722ecb;
   padding: 7px;
   text-align: center;
   -webkit-box-flex: 1;

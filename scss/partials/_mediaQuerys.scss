@@ -3,7 +3,7 @@
 @media (max-width:768px){
 
     header{
-        position: absolute;
+        position: fixed;
        label{
         display: block;
         
@@ -11,7 +11,7 @@
     } 
     } 
     .menu{
-        position: absolute;
+        position:fixed;
         width: 70%;
         margin-left: -70%;
         transition: all 0.5s;
