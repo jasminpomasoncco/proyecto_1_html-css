@@ -52,10 +52,10 @@ margin-left: 90px;
    
     background: $naranja;
     padding: 10px;
-    margin-top:10px;
-    
-    margin: 20px;
-    
+    margin-top:5px;
+   
+    margin: 10%;
+    margin-left: 10%;
     color: $blanco;
     box-shadow: 7px 15px 37px rgb(0, 0, 0);
     .botons{
@@ -70,6 +70,13 @@ margin-left: 90px;
 
     
 }
+
+.contactos_s{
+
+align-items: center;
+display: -webkit-box;
+}
+
 .controles{
     width: 100%;
     padding: 10px;
@@ -85,8 +92,7 @@ margin-left: 90px;
 .ubicacion{
     padding: 10px;
     margin-top:40px;
-    margin: auto;
-  margin-left: 30%;
+
   margin-bottom: 20px;
 }
 
@@ -173,7 +179,20 @@ label{
     position: fixed;
     top:66px;
 
-   
+   ol{
+       a{
+          list-style: none;
+          padding: 10px 60px;
+         text-align: center;
+         border-radius: 5px;
+       }
+   }
+   a:hover{
+       background: #f1ebebe7;
+       font-size: 20px;
+       color:rgb(146, 0, 0)
+       
+   }
 }
 
 .item__servicio{

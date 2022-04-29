@@ -147,6 +147,9 @@ header .logo_main {
   .carrusel-menu img:hover {
     border: none;
   }
+  footer {
+    width: 130%;
+  }
   footer .contenedor-footer {
     height: 600px;
     display: -webkit-box;
@@ -157,6 +160,15 @@ header .logo_main {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
+  }
+  .contactos_s {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -235,8 +247,9 @@ main {
   width: 400px;
   background: #c4722ecb;
   padding: 10px;
-  margin-top: 10px;
-  margin: 20px;
+  margin-top: 5px;
+  margin: 10%;
+  margin-left: 10%;
   color: #ffffff;
   -webkit-box-shadow: 7px 15px 37px black;
           box-shadow: 7px 15px 37px black;
@@ -248,6 +261,13 @@ main {
   color: #ffffff;
   border: none;
   padding: 10px;
+}
+
+.contactos_s {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
 }
 
 .controles {
@@ -264,8 +284,6 @@ main {
 .ubicacion {
   padding: 10px;
   margin-top: 40px;
-  margin: auto;
-  margin-left: 30%;
   margin-bottom: 20px;
 }
 
@@ -359,6 +377,19 @@ label {
   right: 0;
   position: fixed;
   top: 66px;
+}
+
+.navegacion ol a {
+  list-style: none;
+  padding: 10px 60px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.navegacion a:hover {
+  background: #f1ebebe7;
+  font-size: 20px;
+  color: #920000;
 }
 
 .item__servicio {
