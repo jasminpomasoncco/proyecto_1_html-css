@@ -2,46 +2,35 @@
     display: flex;
     gap: 10px;
     justify-content: center;
-    padding: 40px;
-    top: 200px;
+ 
     object-fit: contain;
-  }
-   
-  .carrusel ul {
+
+    ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    max-width: 1270px;
+    max-width: 100%;
     /* max-width: 510px; */
     scroll-behavior: smooth;
   }
   
+  }
+   
+
   .carrusel-fotos {
     display: flex;
-    gap: 10px;
+   
     overflow: auto;
-    
-  } 
-  
-  .carrusel-fotos img {
+
+    img {
    
     width: 1200px;
     height: 500px;
     object-fit: contain;
   }
-  
-  .carrusel-menu {
-    display: none;
-  }
-  
+    
+  } 
+ 
 
-  .carrusel-menu {
-    display: block; 
-    img {
-    box-sizing: border-box;
-    width: 50px;
-    height: 40px;
-    border: 10px solid rgb(104, 88, 88);
-  }
 
-  }
+  
